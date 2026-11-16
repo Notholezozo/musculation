@@ -1,0 +1,85 @@
+// Jetons du design system « Forge », thème « fonte » (sombre).
+// Les composants ne codent aucune couleur en dur : ils lisent ces variables CSS.
+// La page /design-system de l'application montre chaque jeton et chaque composant.
+
+@mixin root-tokens {
+  // Surfaces : de la fonte brute (page) à l'acier brossé (éléments soulevés)
+  --surface-100: #0e0f11; // fond de page
+  --surface-200: #17191c; // cartes, panneaux
+  --surface-300: #202327; // champs, survols
+  --surface-400: #2c3036; // éléments actifs, pistes
+
+  // Texte : la craie
+  --ink: #f2efe9;
+  --ink-muted: #a6abb2;
+  --ink-faint: #767c84; // légendes d'axes, repères discrets
+
+  // Braise : l'action principale et la donnée mise en avant.
+  // --accent pour un texte ou un trait, --accent-fill pour une surface pleine (texte --on-accent).
+  --accent: #ff7a3d;
+  --accent-fill: #ff6a2b;
+  --accent-fill-hover: #ff8450;
+  --accent-soft: #ff6a2b24; // fond d'un élément sélectionné
+  --on-accent: #1c0d04;
+
+  // Traits et états
+  --line: #2a2d32; // séparateurs
+  --border-control: #4d535b; // bordure des champs
+  --focus: #ffd3bd;
+  --success: #62d18d;
+  --danger: #ff8080;
+  --danger-fill: #c93a3a;
+  --on-danger: #fff4f2;
+  --scrim: #000000b3;
+
+  // Disques : les couleurs des disques d'haltérophilie identifient les groupes musculaires.
+  // Elles ne portent jamais de texte : toujours une pastille à côté d'un libellé.
+  --plate-red: #e5534b;
+  --plate-blue: #4c8dff;
+  --plate-yellow: #f0c330;
+  --plate-green: #3fbf7f;
+  --plate-violet: #a78bfa;
+  --plate-teal: #2fc6c6;
+  --plate-pink: #f277b4;
+  --plate-orange: #f59145;
+  --plate-white: #e8e6e1;
+  --plate-steel: #8f98a3;
+
+  // Typographie : Barlow Condensed pour les titres et les chiffres, Barlow pour le reste.
+  --font-display: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', Arial, sans-serif;
+  --font-sans: 'Barlow', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.5rem;
+
+  // Espacements (4, 8, 12, 16, 24, 32, 48, 64)
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  // Angles : usinés, peu arrondis
+  --radius-sm: 4px; // badges, cases du calendrier
+  --radius-md: 6px; // boutons, champs
+  --radius-lg: 10px; // cartes
+  --radius-full: 999px; // pastilles
+
+  --shadow-raised: 0 1px 0 rgba(0, 0, 0, 0.5), 0 12px 32px rgba(0, 0, 0, 0.5);
+
+  // Gabarits
+  --tap-min: 44px; // hauteur minimale de tout élément tactile
+  --content-max: 1080px;
+  --nav-rail: 232px; // largeur du rail de navigation sur grand écran
+  --nav-bar: 64px; // hauteur de la barre d'onglets sur téléphone
+}
+
+// Point de bascule téléphone → grand écran
+$desktop: 900px;

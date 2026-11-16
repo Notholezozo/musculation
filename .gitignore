@@ -1,0 +1,23 @@
+# .NET
+bin/
+obj/
+*.user
+.vs/
+
+# Base SQLite locale et front compilé servi par l'API
+backend/src/Forge.Api/App_Data/
+backend/src/Forge.Api/wwwroot/*
+!backend/src/Forge.Api/wwwroot/.gitkeep
+publish/
+
+# Angular / Node
+node_modules/
+frontend/dist/
+frontend/.angular/
+
+# Éditeurs et OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+Thumbs.db
+.DS_Store
